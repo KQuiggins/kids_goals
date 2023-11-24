@@ -1,0 +1,16 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  // eslint-disable-next-line no-undef
+  plugins: [require('@tailwindcss/forms'), require("@tailwindcss/typography"), require('daisyui')],
+  daisyui: {
+    themes: ['emerald', 'dark', 'light', 'cupcake', 'bumblebee'],
+  },
+}
+
