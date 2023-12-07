@@ -1,15 +1,10 @@
 import home from "../../assets/images/home.png";
 import avatar from "../../assets/images/avatar.png";
 
-
-const handleClick = (e:  React.SyntheticEvent ) => {
-  e.preventDefault()
-  console.log('The link was clicked.');
-
-
-
-
-}
+const handleClick = (e: React.SyntheticEvent) => {
+  e.preventDefault();
+  console.log("The link was clicked.");
+};
 
 const SignIn = () => {
   return (
@@ -56,7 +51,9 @@ const SignIn = () => {
             />
           </div>
 
-          <button onClick={handleClick} className="btn btn-primary w-full mt-4">Log in</button>
+          <button onClick={handleClick} className="btn btn-primary w-full mt-4">
+            Log in
+          </button>
 
           <div className="text-center mt-4">
             <a href="/register" className="link link-secondary">
