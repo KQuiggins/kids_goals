@@ -1,12 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import home from "../../assets/images/home.png";
 import avatar from "../../assets/images/avatar.png";
 
-const handleClick = (e: React.SyntheticEvent) => {
-  e.preventDefault();
-  console.log("The link was clicked.");
-};
+
 
 const SignIn = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    navigate('/list');
+    console.log("The link was clicked.");
+  };
+
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

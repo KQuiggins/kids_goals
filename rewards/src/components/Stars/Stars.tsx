@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './StarChart.css'; // Make sure to create this CSS file
 
 // The Star component will take a prop to determine if it is filled or not
-const Star = ({ filled }) => (
+
+
+type StarProps = {
+  filled: boolean;
+};
+
+const Star = ({ filled }: StarProps ) => (
   <div className={`star ${filled ? 'filled' : 'empty'}`}></div>
 );
 
 // The StarChart component manages the state of all stars
-const StarChart = ({ totalStars }) => {
+
+type StarChartProps = {
+  totalStars: number;
+};
+
+const StarChart = ({ totalStars }: StarChartProps) => {
   const [earnedStars, setEarnedStars] = useState(0);
 
   const earnStar = () => {
